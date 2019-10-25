@@ -59,7 +59,6 @@ print("squares minus even")
 print(sorted(squares.difference(even)))
 print(sorted(squares - even))
 
-
 # the difference_update method changes the first set to be the difference between itself and the second list,
 # i.e it removes all elements from set b from set a, and stores the value in set a.
 print("=" * 40)
@@ -79,3 +78,24 @@ print(sorted(squares))
 print("symmetric even minus squares")
 print(sorted(even.symmetric_difference(squares)))
 print(sorted(even ^ squares))
+
+# removal of values from a set can be done using the remove or discard method. Remove will throw an error if the
+# value is not in the set, whereas discard will not.
+
+squares.remove(4)
+squares.remove(16)
+print(squares)
+
+squares = {4, 6, 16}
+
+print("=" * 40)
+
+print(even)
+print(squares)
+if squares.issubset(even):
+    print("squares is subset of even")
+
+if even.issuperset(squares):
+    print("even is superset of squares")
+
+
